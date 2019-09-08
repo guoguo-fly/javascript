@@ -1,0 +1,108 @@
+
+
+function test(a,b,c){
+
+alert(a+b+c);
+alert(arguments[0]);
+alert(arguments[1]);
+alert(arguments[2]);
+}
+
+test(5,6,7)
+
+*******************************
+
+function test(args){
+
+console.log(arguments)
+alert(arguments[0]);
+alert(arguments[1]);
+alert(arguments[2]);
+}
+
+test([5,6,7])
+***********************************
+function test(args){
+
+console.log(arguments)
+alert(arguments[0]);
+alert(arguments[1]);
+alert(arguments[2]);
+}
+
+test(5,6,7)
+***************************
+
+function test(args){
+console.log(args)
+console.log(arguments)
+alert(args[0]);
+alert(args[1]);
+alert(args[2]);
+}
+
+test([5,6,7])
+
+**************************
+var obj1 = {
+name: "guoying",
+ar : [1,2,3],
+num: function(){
+	var tt = this.ar;
+	console.log(tt)
+},
+whoname: function(){
+	alert(this.name);
+}
+}
+
+var obj2 = {
+name: "songjian",
+}
+obj1.whoname.call(obj2)
+obj1.whoname.apply(obj2)
+let test = obj1.whoname.bind(obj2)
+
+**************************
+var obj1 = {
+name: "guoying",
+ar : [1,2,3],
+num: function(args){
+var u = [];
+for ( var h in arguments) {
+		u.push(arguments[h]);
+
+}
+	var tt = u.join("*");
+	alert(tt)
+},
+whoname: function(){
+	alert(this.name);
+}
+}
+
+var obj2 = {
+name: "songjian",
+}
+obj1.num.call(obj2,1,2,3)
+obj1.num.apply(obj2)
+let test = obj1.num.bind(obj2)
+
+
+**************************
+
+function test(args){
+console.log(arguments)
+}
+
+test(1,2,3)
+
+
+function test2(...args){
+console.log(arguments)
+}
+
+test2(1,2,3)
+
+上述两种传参方法没有大的区别，只是第二种传入数组时，会通过扩展符把数组分为一个一个的元素
+***************************
