@@ -28,3 +28,4 @@
 	eg: obj1.func.call(obj2,1,2,3)  == obj1.func.call(obj2,...[1,2,3])
 		obj1.func.call(obj2,1,2,3)  == obj1.func.apply(obj2,[1,2,3])
 ```
+## 同域访问（domain/ports/protocl）
